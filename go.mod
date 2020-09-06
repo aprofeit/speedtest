@@ -15,6 +15,7 @@ require (
 	github.com/revel/modules v1.0.0
 	github.com/revel/pathtree v0.0.0-20140121041023-41257a1839e9 // indirect
 	github.com/revel/revel v1.0.0
+	github.com/rs/zerolog v1.19.0
 	github.com/twinj/uuid v1.0.0 // indirect
 	github.com/xeonx/timeago v1.0.0-rc4 // indirect
 	golang.org/x/net v0.0.0-20200904194848-62affa334b73 // indirect

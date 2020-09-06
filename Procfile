@@ -1,1 +1,1 @@
-web: build/speedtest
+web: speedtest

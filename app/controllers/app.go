@@ -1,8 +1,6 @@
 package controllers
 
 import (
-  "fmt"
-  "unsafe"
   "strings"
 	"github.com/revel/revel"
 )
@@ -16,6 +14,7 @@ func (c App) Index() revel.Result {
 }
 
 const size = 100000000
+const endSize = 95.37
 
 func (c App) Test() revel.Result {
   arr := make([]string, size)
@@ -24,8 +23,6 @@ func (c App) Test() revel.Result {
   }
   content := strings.Join(arr, "")
 
-  size := unsafe.Sizeof(content)
-  fmt.Printf("Size of content: %d", size)
 
   return c.Render(content)
 }

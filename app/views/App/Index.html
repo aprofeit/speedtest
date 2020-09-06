@@ -1,6 +1,23 @@
 {{set . "title" "Home"}}
 {{template "header.html" .}}
 
-<h1>Hello, world!</h1>
+<h1>Speed test</h1>
+<div class="result">Running test</div>
+
+<script type="application/javascript">
+  const start = performance.now();
+  var end;
+  fetch("/test")
+    .then(response => {
+      end = performance.now();
+      let difference = end - start;
+      console.log(difference);
+      let resultEl = document.getElementsByClassName('result')[0];
+      const seconds = difference / 1000.0;
+      const speed = 100.0 / seconds * 8;
+      const diffText = `Took ${seconds} seconds to download 100MB. That means you're getting ${speed} mbit/s.`;
+      resultEl.innerHTML = diffText;
+    });
+</script>
 
 {{template "footer.html" .}}

@@ -1,4 +1,4 @@
-module speedtest
+module github.com/aprofeit/speedtest
 
 go 1.14
 
